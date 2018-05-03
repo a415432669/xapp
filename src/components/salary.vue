@@ -1,5 +1,5 @@
 <template>
-  <div class="salay">
+  <div class="salary">
       <div class="header">
         <div class="left" @click="toIndex">
           <img src="../../static/img/rightarrow.png" alt="">
@@ -50,7 +50,7 @@
           </router-link>
         </div>
       </div>
-
+      <div class="zhanwei"></div>
       <div class="pageBottom">到底了</div>
   </div>
 </template>
@@ -73,6 +73,9 @@ export default {
 </script>
 
 <style scoped>
+.salary{
+  position: relative;
+}
 .header>.left{
   display: flex;
   font-size: 0.3rem;

@@ -5,11 +5,11 @@ var data = {
         isInfo : true,
         //轮播图
         imgList:[
-            "../../static/img/img.png",
-            "../../static/img/img.png",
-            "../../static/img/img.png",
-            "../../static/img/img.png",
-            "../../static/img/img.png"
+            "https://a415432669.github.io/xaShow/static/img/img.png",
+            "https://a415432669.github.io/xaShow/static/img/img.png",
+            "https://a415432669.github.io/xaShow/static/img/img.png",
+            "https://a415432669.github.io/xaShow/static/img/img.png",
+            "https://a415432669.github.io/xaShow/static/img/img.png"
         ],
         touTiao:[
             {
@@ -136,6 +136,36 @@ var data = {
             time:'2017-10-11至2018-4-20'
          }
     ],
+    //个人信息页面
+    userInfo:{
+        userImg:'http://img3.imgtn.bdimg.com/it/u=552901093,87727910&fm=27&gp=0.jpg',
+        username:'王大年',
+        userSex:'男',
+        infoList:[
+            {
+                key:'手机号：',
+                value:'13288888888'
+            },
+            {
+                key:'身份证号：',
+                value:'441999999000099667'
+            },
+            {
+                key:'出身年月：',
+                value:'1966-08-08'
+            },{
+                key:'常住地址：',
+                value:'广东省珠海市高新区创业路11111118888999988'
+            },{
+                key:'有效期：',
+                value:'2088-09-27'
+            },{
+                key:'培训记录：',
+                value:'---'
+            }
+
+        ],
+    }
 }
 
 export default data;

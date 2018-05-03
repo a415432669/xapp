@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="salaryPage">
       <div class="header">
         <div class="left" @click="toInfo">
           <img src="../../static/img/rightarrow.png" alt="">
@@ -94,6 +94,9 @@ export default {
 </script>
 
 <style scoped>
+.salaryPage{
+  position: relative;
+}
 .header>.left{
   display: flex;
   font-size: 0.3rem;

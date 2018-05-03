@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="gzllPage">
       <div class="header">
         <div class="left" @click="toInfo">
           <img src="../../static/img/rightarrow.png" alt="">
@@ -74,6 +74,10 @@ export default {
 </script>
 
 <style scoped>
+.gzllPage{
+  position: relative;
+}
+
 .header>.left{
   display: flex;
   font-size: 0.3rem;

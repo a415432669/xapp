@@ -8,6 +8,7 @@ import salary from '@/components/salary'
 import salaryPage from '@/components/salaryPage'
 import aqjy from '@/components/aqjy'
 import gzllPage from '@/components/gzllPage'
+import me from '@/components/me'
 
 Vue.use(Router)
 
@@ -45,6 +46,10 @@ export default new Router({
       path:'/gzllPage/:id',
       name:'gzllPage',
       component:gzllPage
+    },{
+      path:'/me',
+      name:'me',
+      component:me
     }
   ]
 })

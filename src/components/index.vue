@@ -69,7 +69,7 @@
                 <div class="gzList">
                   <div class="gzItem" v-for="(value,index) in gongzi[0]" :key="index">
                     <div class="gzTime">{{value.time}}</div>
-                    <div class="gzPay">{{value.pay}}</div>
+                    <div class="gzPay">{{value.pay}}.00元</div>
                   </div>
                   
                 </div>
@@ -78,7 +78,7 @@
                 <div class="gzList">
                   <div class="gzItem" v-for="(value,index) in gongzi[1]" :key="index">
                     <div class="gzTime">{{value.time}}</div>
-                    <div class="gzPay">{{value.pay}}</div>
+                    <div class="gzPay">{{value.pay}}.00元</div>
                   </div>
                   
                 </div>
@@ -87,7 +87,7 @@
                 <div class="gzList">
                   <div class="gzItem" v-for="(value,index) in gongzi[2]" :key="index">
                     <div class="gzTime">{{value.time}}</div>
-                    <div class="gzPay">{{value.pay}}</div>
+                    <div class="gzPay">{{value.pay}}.00元</div>
                   </div>
                   
                 </div>
@@ -243,6 +243,10 @@ export default {
 <style scoped>
 .header>.right{
   right: -0.5rem;
+  top:0.05rem;
+}
+.is-active{
+  z-index: 1000;
 }
 
 
@@ -287,6 +291,7 @@ export default {
   margin: 0.35rem 0.3rem 0rem;
   box-shadow:  0 0.05rem 0.05rem #999;
   font-size: 0.4rem;
+  background: #F7F7F7;
 }
 
 .row>.pane>.paneTop{
