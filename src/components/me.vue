@@ -36,7 +36,7 @@
       </router-link>
     
     
-      <router-link to="/ygpj">
+      <router-link to="/ygpj/sdpj">
         <div class="tabItem" id="ygpj">
           <img slot="icon" src="../../static/img/ygpj.png">
           用工评价

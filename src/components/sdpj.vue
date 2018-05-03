@@ -1,25 +1,17 @@
 <template>
-  <div class="index">
-    
-
-
-    <div class="header">
-      <div class="left"></div>
-      <div class="center">工作履历</div>
-    </div>
-    <div class="headerzhanwei"></div>
-
-    
-    <div class="listInfo">
-        <div class="infoPane" v-for="(item,index) in infoList" :key="index">
-          <router-link :to="'/gzllPage/'+item.gzId">
+  <div>
+      <div class="listInfo">
+        <div class="infoPane" v-for="(item,index) in sdpj" :key="index">
+         
             <div class="infoHeader">
               <div class="top">
-                <span>{{item.projectName}}</span>
-                <span class="chuizi"></span>
+                <span class="content">{{item.title}}</span>
+                <span class="chuizi">
+                  <img :src="item.imgSrc" alt="">
+                </span>
               </div>
               <div class="bottom">
-                {{item.company}}&nbsp;&nbsp;{{item.workname}}
+                {{item.company}}
               </div>  
             </div>
             <div class="infoFooter">
@@ -28,86 +20,60 @@
                     {{item.time}}
                   </span>
                 </div>
-                <div class="right">
-                  <span>
-                    查看详情
-                  </span>
-                  <span class="iconRight">
-
-                  </span>
-                  
-                </div>
+                
             </div>
             
-          </router-link>
+         
         </div>
       </div>
 
-
-
-
-  
-    <div class="zhanwei"></div>
-    <div class="tabbar">
-      <router-link to="/">
-        <div class="tabItem" id="sy">
-          <img slot="icon" src="../../static/img/shouye1.png">
-          首页
-        </div>
-      </router-link>
-    
-    
-      <router-link to="/gzll">
-        <div class="tabItem  is-selected" id="gzll">
-          <img slot="icon" src="../../static/img/gzll2.png">
-          工作履历
-        </div>
-      </router-link>
-    
-    
-      <router-link to="/ygpj/sdpj">
-        <div class="tabItem" id="ygpj">
-          <img slot="icon" src="../../static/img/ygpj.png">
-          用工评价
-        </div>
-      </router-link>
-    
-    
-      <router-link to="/me">
-        <div class="tabItem" id="me">
-          <img slot="icon" src="../../static/img/me1.png">
-          我的
-        </div>
-      </router-link>
-    </div>
-  
+      <div class="pjbutton">
+        <img src="../../static/img/add.png" alt="">
+        <div class="text">我要评价</div>
+        
+      </div>
   </div>
-
-  
 </template>
+
 
 <script>
 import data from '../data'
 export default {
   data:function(){
     return {
-      infoList:data.gzll
-    }
-  },
-  methods:{
-    toIndex:function(){
-      this.$router.push('/')
+      sdpj:data.sdpj
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.header>.right{
-  right: -0.5rem;
+.pjbutton{
+  width: 3.8rem;
+  margin: 1rem auto;
+  height: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.45rem;
+  background: #B22329;
+  color: #fff;
+  font-size: 0.45rem;
+}
+.pjbutton>img{
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.pjbutton>.text{
+  padding-left: 0.3rem;
 }
 
+
+
+.listInfo{
+  width: 10rem;
+  height: 10rem;
+}
 .listInfo>.infoPane{
   width: 9.5rem;
   height: 2.65rem;
@@ -137,13 +103,22 @@ export default {
   color: #B22329;
   
 }
+.listInfo>.infoPane .infoHeader>.top span.content{
+  width: 6.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  
+}
 
 .listInfo>.infoPane .infoHeader>.top span.chuizi{
   display: block;
-  height: 0.65rem;
-  width: 0.65rem;
-  background: url('../../static/img/label.png') no-repeat;
-  background-size: 0.65rem 0.65rem;
+  
+}
+.listInfo>.infoPane .infoHeader>.top span.chuizi img{
+  width: 1.1rem;
+  height: 1.1rem;
+  transform: translate(0rem,0.5rem)
 }
 
 
@@ -184,6 +159,4 @@ export default {
   background-size:100% 100%;
   margin-left: 0.1rem;
 }
-
-
 </style>

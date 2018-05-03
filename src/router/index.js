@@ -9,6 +9,10 @@ import salaryPage from '@/components/salaryPage'
 import aqjy from '@/components/aqjy'
 import gzllPage from '@/components/gzllPage'
 import me from '@/components/me'
+import ygpj from '@/components/ygpj'
+import sdpj from '@/components/sdpj'
+import fqpj from '@/components/fqpj'
+import flwq from '@/components/flwq'
 
 Vue.use(Router)
 
@@ -50,6 +54,25 @@ export default new Router({
       path:'/me',
       name:'me',
       component:me
+    },{
+      path:'/ygpj',
+      name:'ygpj',
+      component:ygpj,
+      children:[
+        {
+          path:'sdpj',
+          name:'sdpj',
+          component:sdpj
+        },{
+          path:'fqpj',
+          name:'fqpj',
+          component:fqpj
+        },{
+          path:'flwq',
+          name:'flwq',
+          component:flwq
+        }
+      ]
     }
   ]
 })

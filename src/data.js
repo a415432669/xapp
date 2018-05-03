@@ -165,7 +165,26 @@ var data = {
             }
 
         ],
-    }
+    },
+    //用工评价的收到评价页面
+    sdpj:[
+        {
+            title:'干活不认真',
+            imgSrc:'https://a415432669.github.io/xaShow/static/img/kulian.png',
+            company:'广东建粤工程有限公司',
+            time:'2017-10-11'
+        },{
+            title:'私生活不检点',
+            imgSrc:'https://a415432669.github.io/xaShow/static/img/kulian.png',
+            company:'广东建粤工程有限公司',
+            time:'2017-10-11'
+        },{
+            title:'态度棒棒的',
+            imgSrc:'https://a415432669.github.io/xaShow/static/img/xiaolian.png',
+            company:'广东建粤工程有限公司',
+            time:'2017-10-11'
+        },
+    ]
 }
 
 export default data;

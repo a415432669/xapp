@@ -64,7 +64,7 @@
         </div>
         <div class="paneBottom">
           <div class="gongzi">
-            <mt-swipe class="gzSwiper" :show-indicators="false" :auto='0'>
+            <mt-swipe class="gzSwiper" :show-indicators="false" :auto="6000"  :speed='1000'>
               <mt-swipe-item :class="{'is-active':gzIndex==1}">
                 <div class="gzList">
                   <div class="gzItem" v-for="(value,index) in gongzi[0]" :key="index">
@@ -93,8 +93,6 @@
                 </div>
               </mt-swipe-item>
             </mt-swipe>
-            <div class="circleLeft" @click='gzLeft'><img src="../../static/img/left.png" alt=""></div>
-            <div class="circleRight" @click='gzRight'><img src="../../static/img/right.png" alt=""></div>
           </div>
           
         </div>
@@ -146,7 +144,7 @@
       </router-link>
     
     
-      <router-link to="/ygpj">
+      <router-link to="/ygpj/sdpj">
         <div class="tabItem" id="ygpj">
           <img slot="icon" src="../../static/img/ygpj.png">
           用工评价
