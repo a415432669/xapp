@@ -72,7 +72,8 @@ export default {
 
 .listInfo{
   width: 10rem;
-  height: 10rem;
+  height: 10.5rem;
+  overflow: scroll;
 }
 .listInfo>.infoPane{
   width: 9.5rem;
