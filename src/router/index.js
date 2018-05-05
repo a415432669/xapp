@@ -13,6 +13,10 @@ import ygpj from '@/components/ygpj'
 import sdpj from '@/components/sdpj'
 import fqpj from '@/components/fqpj'
 import flwq from '@/components/flwq'
+import wypj from '@/components/wypj'
+import login from '@/components/login'
+import yhxy from '@/components/yhxy'
+import yzm from '@/components/yzm'
 
 Vue.use(Router)
 
@@ -73,6 +77,22 @@ export default new Router({
           component:flwq
         }
       ]
+    },{
+      path:'/wypj',
+      name:'wypj',
+      component:wypj
+    },{
+      path:'/login',
+      name:'login',
+      component:login
+    },{
+      path:'/yhxy',
+      name:'yhxy',
+      component:yhxy
+    },{
+      path:'/yzm',
+      name:'yzm',
+      component:yzm
     }
   ]
 })

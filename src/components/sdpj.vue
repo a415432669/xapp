@@ -7,7 +7,7 @@
               <div class="top">
                 <span class="content">{{item.title}}</span>
                 <span class="chuizi">
-                  <img :src="item.imgSrc" alt="">
+                  <img :src="item.imgSrc" alt="" >
                 </span>
               </div>
               <div class="bottom">
@@ -27,7 +27,7 @@
         </div>
       </div>
 
-      <div class="pjbutton">
+      <div class="pjbutton" @click="toWypj">
         <img src="../../static/img/add.png" alt="">
         <div class="text">我要评价</div>
         
@@ -43,6 +43,10 @@ export default {
     return {
       sdpj:data.sdpj
     }
+  },methods:{
+    toWypj:function(){
+      this.$router.push('/wypj')
+    },
   }
 }
 </script>

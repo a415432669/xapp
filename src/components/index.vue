@@ -64,7 +64,7 @@
         </div>
         <div class="paneBottom">
           <div class="gongzi">
-            <mt-swipe class="gzSwiper" :show-indicators="false" :auto="6000"  :speed='1000'>
+            <mt-swipe class="gzSwiper" :show-indicators="false" :auto="0"  :speed='1000'>
               <mt-swipe-item :class="{'is-active':gzIndex==1}">
                 <div class="gzList">
                   <div class="gzItem" v-for="(value,index) in gongzi[0]" :key="index">
@@ -375,10 +375,12 @@ export default {
   background: #B22329;
   border-radius: 0.1rem;
   color: #fff;
-  padding: 0.2rem;
+  padding: 0.3rem 0.2rem 0.1rem;
+  
 }
 .row>.pane>.paneBottom>.gongzi>.gzSwiper .gzItem>.gzTime{
   font-size: 0.16rem;
+  line-height: 0.2rem;
 }
 .row>.pane>.paneBottom>.gongzi>.gzSwiper .gzItem>.gzPay{
   font-size: 0.3rem;

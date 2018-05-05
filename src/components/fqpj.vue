@@ -18,7 +18,7 @@
             </div>
             <div class="imgList">
               <div class="imgItem" v-for="(imgItem,i) in item.imgList" :key="i">
-                <img :src="imgItem" alt="">
+                <img :src="imgItem" data-preview-src="" :data-preview-group="index">
               </div>
               
             </div>
@@ -38,7 +38,7 @@
 
       <div class="pjbutton">
         <img src="../../static/img/add.png" alt="">
-        <div class="text">我要评价</div>
+        <div class="text" @click="toWypj">添加评价</div>
         
       </div>
   </div>
@@ -47,19 +47,34 @@
 
 <script>
 import data from '../data'
+import zoom from  '../../static/js/mui.zoom.js'
+import previewImage from '../../static/js/mui.previewimage.js'
+
 export default {
   data:function(){
     return {
       fqpj:data.fqpj,
       playStates:Array(data.fqpj.length),
-      playImg:'../../static/img/play.png',
-      pauseImg:'../../static/img/pause.png',
+      playImg:'https://a415432669.github.io/xaShow/static/img/play.png',
+      pauseImg:'https://a415432669.github.io/xaShow/static/img/pause.png',
       playTimes:Array(data.fqpj.length),
       timerInter:null
     }
   },mounted:function(){
-    console.log(this.$refs)
+    // console.log(mui)
+    zoom(mui)
+    previewImage(mui)
+    // console.log(mui.previewImage)
+    mui.previewImage();
+  
+  
+  
+  
+  
   },methods:{
+    toWypj:function(){
+      this.$router.push('/wypj')
+    },
     playAudio:function(index){
       var that = this
       var a = this.$refs.audio[index]

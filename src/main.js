@@ -3,10 +3,17 @@
 import Vue from 'vue'
 // Vue.config.productionTip = false
 import MintUI from 'mint-ui'
-import '../static/css/style.css'
+
 import '../static/css/mint-style.css'
 import App from './App.vue'
 import router from './router'
+
+import Mui from 'vue-awesome-mui'
+import 'vue-awesome-mui/mui/dist/css/mui.css'
+import '../static/css/style.css'
+import "vue-awesome-mui/mui/examples/hello-mui/css/icons-extra.css";
+// mount with global
+Vue.use(Mui)
 
 Vue.use(MintUI)
 

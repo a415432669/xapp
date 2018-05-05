@@ -17,6 +17,9 @@
           <div class="itemLeft">{{item.key}}</div>
           <div class="itemRight">{{item.value}}</div>
         </div>
+        <div class="infoItem">
+          <router-link to="/login"  style="width:100%; text-align:center; background:#A81E29;color:#fff;">退出登陆</router-link>
+        </div>
       </div>
 
       <div class="tabbar">
