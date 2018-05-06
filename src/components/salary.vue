@@ -130,9 +130,11 @@ export default {
   width: 7.8rem;
   border: none;
   outline: none;
-  height: 0.5rem;
+  height: 0.8rem;
   font-size: 0.4rem;
   background: transparent;
+  padding: 0;
+  margin: 0;
 }
 
 

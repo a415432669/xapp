@@ -7,7 +7,7 @@
               <div class="top">
                 <span class="content">{{item.title}}</span>
                 <span class="chuizi">
-                  <audio :src="item.audioSrc" ref="audio"></audio>
+                  <audio :src="item.audioSrc" ref="audio" hidden ></audio>
                   <img :src="playStatesImg[index]" alt="" @click="playAudio(index)">
                   <span class="audioTime">{{playTimes[index]}}</span>
                 </span>
