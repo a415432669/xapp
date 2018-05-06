@@ -9,7 +9,7 @@ import App from './App.vue'
 import router from './router'
 
 import Mui from 'vue-awesome-mui'
-import 'vue-awesome-mui/mui/dist/css/mui.css'
+import '../static/css/mui.css'
 import '../static/css/style.css'
 import "vue-awesome-mui/mui/examples/hello-mui/css/icons-extra.css";
 // mount with global
