@@ -1,5 +1,5 @@
 <template>
-  <div id="me">
+  <div id="mePage">
       <div class="header">
         <div class="center">个人信息</div>
       </div>
@@ -72,7 +72,7 @@ export default {
 </script>
 
 <style scoped>
-#me{
+#mePage{
   width: 100%;
   height: 100%;
   overflow: scroll;
