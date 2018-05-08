@@ -39,6 +39,9 @@ export default {
   methods:{
     toIndex:function(){
       this.$router.push('/')
+    },
+    toLogin:function(){
+      this.$router.push('/login')
     }
   }
 }

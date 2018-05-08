@@ -12,7 +12,7 @@
       <div class="search">
         <div class="input">
           <img class="imgSearch" src="../../static/img/search.png" alt="">
-          <input type="text" placeholder="按月份查询">
+          <input type="month" placeholder="按月份查询">
           <img class="riliSearch" src="../../static/img/rili.png" alt="">
         </div>
       </div>

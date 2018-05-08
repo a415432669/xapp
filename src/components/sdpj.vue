@@ -29,7 +29,6 @@
 
       <div class="pjbutton" @click="toWypj">
         <img src="../../static/img/add.png" alt="">
-        <div class="text">我要评价</div>
         
       </div>
   </div>
@@ -53,20 +52,23 @@ export default {
 
 <style scoped>
 .pjbutton{
-  width: 3.8rem;
-  margin: 1rem auto;
-  height: 0.9rem;
+  width: 1.7rem;
+  height: 1.7rem;
+  position:fixed;
+  left: 4.15rem;
+  bottom: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0.45rem;
+  border-radius: 0.85rem;
   background: #B22329;
-  color: #fff;
   font-size: 0.45rem;
+  overflow: hidden;
+  box-shadow:0 0 0.15rem #333;
 }
 .pjbutton>img{
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 2.0rem;
+  height: 2.0rem;
 }
 .pjbutton>.text{
   padding-left: 0.3rem;

@@ -76,6 +76,8 @@ export default {
   padding: 0.45rem;
   border-radius: 0.3rem;
   box-shadow: 0 0.05rem 0.05rem #ccc;
+  overflow: hidden;
+  word-break: break-all
 }
 
 .infoPage>.title{
@@ -99,7 +101,7 @@ export default {
   padding: 0.45rem 0;
 }
 .infoPage>.content img{
-  width: 100%;
+  width: 8.1rem !important;
 }
 .infoPage>.project{
   text-align: right;

@@ -4,12 +4,13 @@
         <div class="center">登陆</div>
       </div>
       <div class="headerzhanwei"></div>
-      <div class="logo"><img src="../../static/img/logo.png" alt=""></div>
+      
+
+      <div class="loginInput">
+        <div class="logo"><img src="../../static/img/logo.png" alt=""></div>
       <div class="logoBg">
         <img src="../../static/img/loginBg.png" alt="">
       </div>
-
-      <div class="loginInput">
         <div class="inputItem active">
           <input type="text" placeholder="请输入身份证号">
         </div>
@@ -66,7 +67,6 @@ export default {
 }
 
 .logo{
-margin-top: 2rem;
 display: flex;
 justify-content: center;
 }
@@ -75,7 +75,7 @@ width: 3rem;
 height: 0.74rem;
 }
 .logoBg{
-margin-top: 1.6rem;
+margin: 1.6rem 0 3rem;
 display: flex;
 justify-content: center;
 }
@@ -86,7 +86,7 @@ height: 1.7rem;
 
 .loginInput{
   width: 10rem;
-  height: 6.3rem;
+  height: 12.5rem;
   position: fixed;
   bottom: 0;
   left: 0;

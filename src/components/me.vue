@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="me">
       <div class="header">
         <div class="center">个人信息</div>
       </div>
@@ -22,6 +22,8 @@
         </div>
       </div>
 
+
+      <div class="zhanwei"></div>
       <div class="tabbar">
       <router-link to="/">
         <div class="tabItem" id="sy">
@@ -70,6 +72,11 @@ export default {
 </script>
 
 <style scoped>
+#me{
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
 .userInfo{
   width: 10rem;
   height: 4.6rem;

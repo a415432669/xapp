@@ -4,6 +4,7 @@
         <div class="center">用工评价</div>
       </div>
       <div class="headerzhanwei"></div>
+      <div class="headerzhanwei"></div>
       <div class="navTab">
         <div class="navItem">
           <router-link to="/ygpj/sdpj" :class="{active:$route.name=='sdpj'}">收到的评价</router-link>
@@ -68,14 +69,21 @@ export default {
 </script>
 
 <style scoped>
+a:active{
+  color: #333 !important;
+}
 .navTab{
   width: 10rem;
   height: 1.2rem;
+  position: fixed;
+  top: 1rem;
+  z-index: 10;
   display: flex;
-  background: #FAFAFA;
+  background: #fff;
   font-size: 0.35rem;
   justify-content: space-around;
   align-items: center;
+  
 }
 .navItem{
   width: 33%;
