@@ -67,8 +67,8 @@ export default {
   box-shadow:0 0 0.15rem #333;
 }
 .pjbutton>img{
-  width: 2.0rem;
-  height: 2.0rem;
+  width: 1.0rem;
+  height: 1.0rem;
 }
 .pjbutton>.text{
   padding-left: 0.3rem;

@@ -72,11 +72,7 @@ export default {
 </script>
 
 <style scoped>
-#mePage{
-  width: 100%;
-  height: 100%;
-  overflow: scroll;
-}
+
 .userInfo{
   width: 10rem;
   height: 4.6rem;
