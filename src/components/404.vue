@@ -1,55 +1,84 @@
 <template>
   <div>
       <div class="header">
-        <div class="left" @click="toLogin">
+        <div class="left" @click="toBack">
           <img src="../../static/img/rightarrow.png" alt="">
-          <div>返回登陆</div>
+          <div>返回</div>
         </div>
-        <div class="center">用户使用协议</div>
+        <div class="center">错误提示</div>
       </div>
       <div class="headerzhanwei"></div>
       
       
 
-      <div class="yhxyContent">
-        <div v-html="yhxyContent">
-          {{yhxyContent}}
-          
+      <div class="errorContent">
+        <img src="../../static/img/404.png" alt="">
+        <div class="errorText">
+          抱歉我们努力了但页面还是丢了
         </div>
-
-        <router-link to="/errorPage/yhxy">测试：进入错误页面</router-link>
-        <div @click="toError">测试：进入错误页面2</div>
       </div>
-      
+      <div class="bottomError">
+        错误代码404
+      </div>
   </div>
 </template>
 
 
 <script>
-import data from '../data.js'
 export default {
   data:function(){
     return {
-      radioUser:'我同意用户使用协议',
-      yhxyContent:data.yhxy
+      radioUser:'我同意用户使用协议'
     }
     
   },
   methods:{
-    toLogin:function(){
-      this.$router.push('/login')
+    toBack:function(){
+      //获取之前的页面，返回之前的页面
+      var backpage = this.$route.params.id
+      if(backpage=='index'){
+        this.$router.push('/')
+      }else{
+        this.$router.push('/'+backpage)
+      }
+      
+      
     },
-    toError:function(){
-      this.$router.push("/errorPage/yhxy")
-    }
+    
+  },mounted:function(){
+    console.log(this.$route)
   }
 }
 </script>
 
 <style scoped>
-.yhxyContent{
+.errorContent{
+  width: 10rem;
+  height: calc(100vh - 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.errorContent img{
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.errorContent .errorText{
   font-size: 0.35rem;
-  padding: 0.3rem;
+  color: #999;
+  line-height: 1rem;
+  height: 1rem;
+}
+
+.bottomError{
+  height: 1rem;
+  font-size: 0.5rem;
+  text-align: center;
+  width: 10rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 .header>.left{
   display: flex;

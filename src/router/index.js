@@ -17,6 +17,7 @@ import wypj from '@/components/wypj'
 import login from '@/components/login'
 import yhxy from '@/components/yhxy'
 import yzm from '@/components/yzm'
+import errorPage from '@/components/404'
 
 Vue.use(Router)
 
@@ -93,6 +94,10 @@ export default new Router({
       path:'/yzm',
       name:'yzm',
       component:yzm
+    },{
+      path:'/errorPage/:id',
+      name:'errorPage',
+      component:errorPage
     }
   ]
 })

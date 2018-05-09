@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="ygpjPage">
       <div class="header">
         <div class="center">用工评价</div>
       </div>
@@ -20,7 +20,13 @@
         <router-view></router-view>
       </div>
 
-      <div class="zhanwei"></div>
+      <div class="pjbutton" @click="toWypj">
+        <img src="../../static/img/add.png" alt="">
+        
+      </div>
+      <div class="zhanweiYgpj"></div>
+      
+
       <div class="tabbar">
       <router-link to="/">
         <div class="tabItem" id="sy">
@@ -61,6 +67,10 @@
 export default {
   data:function(){
     return {}
+  },methods:{
+    toWypj:function(){
+      this.$router.push('/wypj')
+    },
   },
   mounted:function(){
     // console.log(this.$route)
@@ -69,6 +79,34 @@ export default {
 </script>
 
 <style scoped>
+.navTabContent{
+    height: calc(100vh - 5.5rem);
+    overflow: scroll;
+}
+.zhanweiYgpj{
+  height: 3.5rem;
+}
+
+
+.pjbutton{
+  width: 1.7rem;
+  height: 1.7rem;
+  position:fixed;
+  left: 4.15rem;
+  bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.85rem;
+  background: #B22329;
+  font-size: 0.45rem;
+  overflow: hidden;
+  box-shadow:0 0 0.15rem #333;
+}
+.pjbutton>img{
+  width: 1.0rem;
+  height: 1.0rem;
+}
 a:active{
   color: #333 !important;
 }

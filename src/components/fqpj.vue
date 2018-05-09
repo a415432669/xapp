@@ -36,10 +36,8 @@
         
       </div>
 
-      <div class="pjbutton">
-        <img src="../../static/img/add.png" alt="">
-        
-      </div>
+      
+     
   </div>
 </template>
 
@@ -167,7 +165,8 @@ export default {
 
 .listInfo{
   width: 10rem;
-  height: 12rem;
+  flex: 1;
+  /* height: 12rem; */
   overflow: scroll;
 }
 .listInfo>.infoPane{

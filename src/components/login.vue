@@ -11,11 +11,14 @@
       <div class="logoBg">
         <img src="../../static/img/loginBg.png" alt="">
       </div>
-        <div class="inputItem active">
-          <input type="text" placeholder="请输入身份证号">
+        <div class="inputTip" :class="{isActive:inputTipState}">
+          {{inputTip}}
         </div>
         <div class="inputItem active">
-          <input type="text" placeholder="请输入手机号">
+          <input type="text" placeholder="请输入身份证号" v-model="sfz">
+        </div>
+        <div class="inputItem active">
+          <input type="text" placeholder="请输入手机号" v-model="mobile">
         </div>
         <div class="inputItem">
           <div class="button">
@@ -36,7 +39,13 @@
 export default {
   data:function(){
     return {
-      radioUser:'我同意用户使用协议'
+      radioUser:'我同意用户使用协议',
+      inputTip:'身份证或手机格式错误',
+      inputTipState:false,
+      sfz:'',
+      mobile:'',
+      sfzIsRight:true,
+      mobileIsRight:true,
     }
     
   },
@@ -45,12 +54,45 @@ export default {
       
       this.$router.push('/yhxy')
     }
+  },mounted:function(){
+    this.$watch("sfz", function (newValue, oldValue) {
+      var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+      if(reg.test(newValue) === false) {
+        this.sfzIsRight =true
+      }else{
+        this.sfzIsRight =false
+      }
+      this.inputTipState = this.sfzIsRight||this.mobileIsRight
+    })
+
+    this.$watch("mobile", function (newValue, oldValue) {
+      var reg = /^[1][3,4,5,7,8][0-9]{9}$/;
+      if(reg.test(newValue) === false) {
+        this.mobileIsRight =true
+      }else{
+        this.mobileIsRight =false
+      }
+      this.inputTipState = this.sfzIsRight||this.mobileIsRight
+    })
   }
+
 }
 </script>
 
 <style scoped>
-
+.isActive{
+  display: block !important;
+}
+.inputTip{
+  position: absolute;
+  left: 0.75rem;
+  top: 6.15rem;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  color:#A81E29; 
+  font-size: 0.4rem;
+  display: none;
+}
 .agreement{
   padding-top: 0.1rem;
   color:#A81E29; 
