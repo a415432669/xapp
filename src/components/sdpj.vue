@@ -27,10 +27,7 @@
         </div>
       </div>
 
-      <div class="pjbutton" @click="toWypj">
-        <img src="../../static/img/add.png" alt="">
-        
-      </div>
+      
   </div>
 </template>
 

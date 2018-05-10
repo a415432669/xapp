@@ -14,10 +14,10 @@
         <div class="inputTip" :class="{isActive:inputTipState}">
           {{inputTip}}
         </div>
-        <div class="inputItem active">
+        <div class="inputItem" :class="sfzStyle">
           <input type="text" placeholder="请输入身份证号" v-model="sfz">
         </div>
-        <div class="inputItem active">
+        <div class="inputItem" :class="mobileStyle">
           <input type="text" placeholder="请输入手机号" v-model="mobile">
         </div>
         <div class="inputItem">
@@ -46,6 +46,10 @@ export default {
       mobile:'',
       sfzIsRight:true,
       mobileIsRight:true,
+      sfzStyle:{active:true},
+      mobileStyle:{active:true}
+      // sfzStyle:{isActive:this.sfzIsRight},
+      // mobileStyle:{isActive:this.mobileIsRight}
     }
     
   },
@@ -62,6 +66,8 @@ export default {
       }else{
         this.sfzIsRight =false
       }
+      // console.log(this.sfzIsRight)
+      this.sfzStyle={active:!this.sfzIsRight}
       this.inputTipState = this.sfzIsRight||this.mobileIsRight
     })
 
@@ -72,6 +78,7 @@ export default {
       }else{
         this.mobileIsRight =false
       }
+      this.mobileStyle={active:!this.mobileIsRight}
       this.inputTipState = this.sfzIsRight||this.mobileIsRight
     })
   }
@@ -151,6 +158,18 @@ height: 1.7rem;
   outline: none;
   padding: 0 0.2rem;
   border-radius: 0.01rem;
+}
+.inputItem::after{
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  display: block;
+  position: absolute;
+  background: url(../../static/img/inputerror.png) no-repeat;
+  background-size: 0.55rem 0.55rem;
+  top: 0.25rem;
+  right: 0.2rem;
+
 }
 .inputItem.active::after{
   content: "";
