@@ -12,7 +12,10 @@
       
 
       <div class="loginInput">
-        <div class="inputItem active">
+        <div class="inputTip" :class="{isActive:inputTipState}">
+          {{inputTip}}
+        </div>
+        <div class="inputItem" :class="yzmStyle">
           <input type="text" placeholder="请输入验证码">
         </div>
         <div class="inputItem">
@@ -32,7 +35,10 @@
 export default {
   data:function(){
     return {
-      radioUser:'我同意用户使用协议'
+      radioUser:'我同意用户使用协议',
+      inputTip:'验证码错误',
+      inputTipState:true,
+      yzmStyle:{active:false}
     }
     
   },
@@ -48,6 +54,19 @@ export default {
 </script>
 
 <style scoped>
+.isActive{
+  display: block !important;
+}
+.inputTip{
+  position: absolute;
+  left: 0.75rem;
+  top: 0.5rem;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  color:#A81E29; 
+  font-size: 0.4rem;
+  display: none;
+}
 .header>.left{
   display: flex;
   font-size: 0.3rem;
@@ -101,6 +120,7 @@ height: 1.7rem;
 .loginInput{
   width: 10rem;
   padding: 1rem 0.5rem;
+  position: relative;
 }
 .loginInput .inputItem{
   width: 9rem;
@@ -119,6 +139,18 @@ height: 1.7rem;
   outline: none;
   padding: 0 0.2rem;
   border-radius: 0.01rem;
+}
+.inputItem::after{
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  display: block;
+  position: absolute;
+  background: url(../../static/img/inputerror.png) no-repeat;
+  background-size: 0.55rem 0.55rem;
+  top: 0.25rem;
+  right: 0.2rem;
+
 }
 .inputItem.active::after{
   content: "";
